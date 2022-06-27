@@ -5,7 +5,11 @@
   <title>{{ title }}</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="text-3xl font-bold underline">
-  {{ content | safe }}
+<body>
+  {% include "./components/navbar.njk" %}
+  <main>
+    {{ content | safe }}
+  </main>
+  {% include "./components/footer.njk" %}
 </body>
 </html>
