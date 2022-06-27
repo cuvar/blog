@@ -1,6 +1,6 @@
 ---
 layout: layout.njk
-title: lume-app custom title
+title: cuvar's blog
 ---
 # Welcome to my website
 
