@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ title }}</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sans': '"Noto Sans"'
+          },
+        },
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="min-h-screen">
+  {% include "./components/navbar.njk" %}
+  <main class="min-h-screen h-full mx-10 my-10 flex justify-center">
+    <div class="w-3/12">
+      <ul>
+        {% for post in search.pages("post") %}
+        <li class="mb-8">
+          <a href="{{post.data.url}}" class="text-2xl font-bold">
+          {{ post.data.title }}
+          </a>
+          <div class="text-gray-500">
+            {{ post.data.created }}
+          </div>
+          <div class="text-gray-800 mt-2">
+            {{ post.data.summary }}
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    {# {{ content | safe }} #}
+    </div>
+  </main>
+  {% include "./components/footer.njk" %}
+  </div>
+</body>
+</html>
