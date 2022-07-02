@@ -1,5 +1,5 @@
 ---
-layout: layout.njk
+layout: index.njk
 title: cuvar's blog
 ---
 # Welcome to my website
