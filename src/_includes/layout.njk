@@ -4,12 +4,25 @@
   <meta charset="UTF-8">
   <title>{{ title }}</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'poppins': ['Poppins', 'sans-serif'] 
+          },
+        },
+      }
+    }
+  </script>
 </head>
 <body>
+  <div class="min-h-screen">
   {% include "./components/navbar.njk" %}
-  <main>
+  <main class="min-h-screen h-full">
     {{ content | safe }}
   </main>
   {% include "./components/footer.njk" %}
+  </div>
 </body>
 </html>
