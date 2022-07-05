@@ -32,7 +32,7 @@
         </div>
       </a>
       <h1 class="font-bold text-3xl text-center mt-10">{{ title }}</h1>
-      <p class="text-left mt-2 text-gray-500">{{ created }}</p>
+      <p class="text-left mt-2 text-gray-500">{{ date | date('yyyy/MM/dd') }}</p>
       <div class="mt-12 text-lg md:text-lg lg:text-md">
         {{ content | safe }}
       </div>
