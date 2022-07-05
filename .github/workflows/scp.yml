@@ -5,15 +5,18 @@ on:
     branches: [pipeline]
 
 jobs:
-  build:
+  Build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        path: src
       - name: Use Deno 16.2
         uses: denoland/setup-deno@v1
         with:
           deno-version: v1.x
-
+      - name: Deno build
+        run: deno task build
       - name: Copy to production via SCP
         uses: appleboy/scp-action@master
         with:
