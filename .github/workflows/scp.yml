@@ -1,0 +1,26 @@
+name: Deploy to server
+
+on:
+  push:
+    branches: [pipeline]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Deno 16.2
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+
+      - name: Copy to production via SCP
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.PRIVATEKEY }}
+          source: /src
+          target: .
+          debug: true
+          rm: true
