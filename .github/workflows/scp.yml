@@ -10,7 +10,9 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
-        path: src
+        with:
+          repository: cuvar/blog
+          path: ./src
       - name: Use Deno 16.2
         uses: denoland/setup-deno@v1
         with:
