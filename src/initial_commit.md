@@ -1,6 +1,6 @@
 ---
 title: Initial commit
-created: 2021/02/02
+date: 2021-02-02
 summary: helllo world
 tags: post
 layout: post.njk
