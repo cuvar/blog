@@ -23,7 +23,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.PRIVATEKEY }}
-          source: ./src
-          target: .
+          source: "src"
+          target: "blog"
           debug: true
           rm: true
