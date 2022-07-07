@@ -14,8 +14,8 @@ jobs:
           deno-version: v1.x
       - name: Checkout repo
         uses: actions/checkout@v3
-      - run: "cd ./src"
       - name: Deno build
+        working-directory: ./src
         run: deno run -A https://deno.land/x/lume@v1.9.1/ci.ts
       - name: Copy to production via SCP
         uses: appleboy/scp-action@master
