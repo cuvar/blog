@@ -13,7 +13,7 @@ jobs:
         with:
           repository: cuvar/blog
           path: ./src
-      - name: Use Deno 16.2
+      - name: Use Deno
         uses: denoland/setup-deno@v1
         with:
           deno-version: v1.x
@@ -25,7 +25,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.PRIVATEKEY }}
-          source: /src
+          source: .
           target: .
           debug: true
           rm: true
