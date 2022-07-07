@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: cuvar/blog
-          path: src
+          # path: src
       - name: Deno build
         run: deno run -A https://deno.land/x/lume@v1.9.1/ci.ts
       - name: Copy to production via SCP
