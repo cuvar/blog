@@ -13,7 +13,7 @@ layout: base.njk
     <div class="text-gray-800 mt-2">
       {{ post.data.excerpt or post.data.summary}}
     </div>
-    <div class="text-gray-800 mt-4">
+    <div class="text-gray-800 mt-4 flex space-x-2">
       {% for tag in post.data.tags %}
         {% if not (tag.toLowerCase() == 'post') %}
           <div class="w-fit px-3 py-1 border-2 border-teal-500 rounded-lg">

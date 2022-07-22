@@ -12,6 +12,15 @@ layout: base.njk
   </a>
   <h1 class="font-bold text-3xl text-left sm:text-center mt-10">{{ title }}</h1>
   <p class="text-left mt-2 text-gray-500">{{ date | date('yyyy/MM/dd') }}</p>
+  <div class="flex space-x-2 mt-4">
+  {% for tag in tags %}
+      {% if not (tag.toLowerCase() == 'post') %}
+        <div class="w-fit px-3 py-1 border-2 border-teal-500 rounded-lg">
+          {{tag}}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
   <div class="mt-12 text-sm sm:text-md md:text-lg lg:text-md">
     {{ content | safe }}
   </div>
