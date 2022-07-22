@@ -9,6 +9,6 @@ Coming soon.
 <!-- more -->
 Hello world.
 
-<code class="syntax-">
-  console.log('hello world');
-</code>
+```javascript
+console.log('hello world');
+```
