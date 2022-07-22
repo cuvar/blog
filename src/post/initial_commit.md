@@ -2,7 +2,9 @@
 title: Initial commit
 date: 2021-02-02
 # summary: First blog post
-tags: post
+tags: 
+  - post
+  - hello world
 layout: post.njk
 ---
 Coming soon.
