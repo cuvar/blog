@@ -6,3 +6,10 @@ tags: post
 layout: post.njk
 ---
 coming soon.
+
+```javascript
+console.log('hello world');
+```
+<code class="syntax-">
+  console.log('hello world');
+</code>
