@@ -1,0 +1,52 @@
+$light: #ececec;
+$off-light: #c7c7c7;
+$dark: #0b0a28;
+$grey: #636363;
+
+$blue: #0099ff;
+$green: #19ff5a;
+$yellow: #ffcb0d;
+$orange: #ff9600;
+$red: #ff1b19;
+$purple: #8219ff;
+$teal: #0dffde;
+
+$code: #282936;
+
+pre {
+  position: relative !important;
+}
+
+:not(pre) > code {
+  border-radius: 0 !important;
+  font-family: Consolas, monaco, monospace !important;
+  word-break: break-all !important;
+  font-size: 1rem !important;
+  color: $off-light !important;
+  background-color: $code !important;
+}
+
+code {
+  border-radius: 0.5rem !important;
+}
+
+button.copy {
+  border-radius: 0 0.5rem 0 0 !important;
+  border: none !important;
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  opacity: 60% !important;
+  background-color: $red !important;
+  color: $light !important;
+  padding: 0.5rem !important;
+  font-family: Consolas, monaco, monospace !important;
+  transition: all 200ms ease !important;
+  cursor: pointer !important;
+}
+
+.copy:hover {
+  border-radius: 0 0.5rem 0.5rem 0 !important;
+  height: 100% !important;
+  opacity: 100% !important;
+}
