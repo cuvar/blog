@@ -1,15 +1,14 @@
 ---
 title: Initial commit
 date: 2021-02-02
-summary: First blog post
+# summary: First blog post
 tags: post
 layout: post.njk
 ---
-coming soon.
+Coming soon.
+<!-- more -->
+Hello world.
 
-```javascript
-console.log('hello world');
-```
 <code class="syntax-">
   console.log('hello world');
 </code>

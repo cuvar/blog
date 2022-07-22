@@ -11,7 +11,7 @@ layout: base.njk
       {{ post.data.created }}
     </div>
     <div class="text-gray-800 mt-2">
-      {{ post.data.summary }}
+      {{ post.data.excerpt or post.data.summary}}
     </div>
   </li>
   {% endfor %}
