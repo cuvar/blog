@@ -23,7 +23,7 @@ site.preprocess([".md"], (page: Page) => {
   page.data.excerpt ??= page.data.content.split(/<!--\s*more\s*-->/)[0];
 });
 
-// site.copy("favicon.ico");
+site.copy("favicon.ico");
 // site.copy("blog/media");
 // site.remoteFile(
 //   "_includes/css/code.css",
