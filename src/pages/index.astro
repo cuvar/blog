@@ -7,7 +7,7 @@ import Navbar from "../components/Navbar.astro";
 
 interface MarkdownFrontmatter {
   title: string;
-  created: string;
+  pubDate: string;
   summary: string;
   url: string;
   tags: string[];
@@ -37,7 +37,7 @@ function formatData(date: string) {
                   { post.frontmatter.title }
                 </a>
                 <div class="text-gray-500">
-                  { formatData(post.frontmatter.created) }
+                  { formatData(post.frontmatter.pubDate) }
                 </div>
                 <div class="text-gray-800 mt-2">
                   { post.frontmatter.summary ?? post.frontmatter.summary }

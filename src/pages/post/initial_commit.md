@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/Post.astro"
 title: "Initial commit"
-created: 2021-02-02
+pubDate: 2021-02-02
 summary: First blog post
 url: initial_commit 
 tags: 
