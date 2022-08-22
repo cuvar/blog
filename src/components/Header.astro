@@ -1,25 +1,8 @@
----
-import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../config';
----
-
-<header>
-	<h2>
-		{SITE_TITLE}
-	</h2>
-	<nav>
-		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/blog">Blog</HeaderLink>
-		<HeaderLink href="/about">About</HeaderLink>
-		<HeaderLink href="https://twitter.com/astrodotbuild" target="_blank">Twitter</HeaderLink>
-		<HeaderLink href="https://github.com/withastro/astro" target="_blank">GitHub</HeaderLink>
-	</nav>
-</header>
-<style>
-	header {
-		margin: 0em 0 2em;
-	}
-	h2 {
-		margin: 0.5em 0;
-	}
-</style>
+<div class="w-full bg-gray-100">
+  <div class="pt-10 pb-10 text-center">
+    <p class="font-bold text-2xl">cuvar's blog</p>
+    <div class="mt-10 mx-10 sm:mx-20 md:mx-40 lg:mx-60">
+      <p class="">Hey there, welcome on my blog! I'm Luca, computer science student based in German. I write about everything that comes to my mind or interests me - whether it's about tech, sports, science, just random thoughts or other topics. Enjoy!</p>
+    </div>
+  </div>
+</div>
