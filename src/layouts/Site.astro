@@ -1,0 +1,26 @@
+---
+import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.astro";
+import Head from "../components/Head.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+
+const { frontmatter } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<Head title={ SITE_TITLE } description={ SITE_DESCRIPTION }/>
+<body>
+  <div class="min-h-screen">
+    <Navbar/>
+    <main class="min-h-screen h-full mx-10 my-10 flex justify-center">
+      <div class="w-10/12 sm:w-8/12 md:w-8/12 lg:w-6/12 xl:w-4/12">
+        <h1 class="font-bold text-3xl text-left sm:text-center mt-10">{ frontmatter.title }</h1>
+        <div class="mt-12 text-sm sm:text-md md:text-lg lg:text-md">
+          <slot/>
+        </div>
+      </div>
+    </main>
+    <Footer/>
+  </div>
+</body>
+</html>

@@ -1,11 +1,12 @@
 ---
-title: Initial commit
-date: 2021-02-02
-# summary: First blog post
+layout: "../../layouts/Post.astro"
+title: "Initial commit"
+pubDate: 2021-02-02
+summary: First blog post
+url: initial_commit 
 tags: 
   - post
   - hello world
-layout: post.njk
 ---
 Coming soon.
 <!-- more -->

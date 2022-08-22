@@ -1,9 +1,0 @@
-layout: index.njk
-author:
-  name: cuvar
-  email: info@cuvar.dev,
-  url: https://cuvar.dev/about/
-metas:
-  site: cuvar's blog
-  description: Hey there, welcome on my blog! I write about everything that comes to my mind or interests me - whether it's about tech, sports, science, just random thoughts or other topics.
-  lang: en

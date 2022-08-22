@@ -1,10 +1,11 @@
 ---
-layout: base.njk
-title: About Me
-templateClass: tmpl-post
-menu:
-  visible: true
-  order: 2
+layout: "../layouts/Site.astro"
+title: "About Me"
+
+# templateClass: tmpl-post
+# menu:
+#   visible: true
+#   order: 2
 ---
 ### Hey there!
 
