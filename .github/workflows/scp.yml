@@ -14,7 +14,7 @@ jobs:
           deno-version: v1.x
       - name: Checkout repo
         uses: actions/checkout@v3
-      - name: Create production build
+      - name: Install packages
         run: npm install
       - name: Create production build
         run: npm run build
