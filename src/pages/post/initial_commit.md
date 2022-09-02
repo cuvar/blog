@@ -31,6 +31,3 @@ I hope you enjoyed this introductory post. Hopefully, see you soon!
 <br/>
 <br/>
 \- Luca
-
-<!-- todo: mark links, -->
-<!-- todo: make absätze -->
