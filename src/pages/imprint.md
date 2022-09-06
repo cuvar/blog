@@ -4,4 +4,4 @@ title: Imprint
 ---
 
 
-![Kontaktdaten](/public/imprint.jpeg)
+![Kontaktdaten](/src/res/imprint.jpeg)
