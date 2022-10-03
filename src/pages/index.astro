@@ -13,51 +13,69 @@ interface MarkdownFrontmatter {
   tags: string[];
 }
 
-const posts = await Astro.glob<MarkdownFrontmatter>('./post/*.md');
+const posts = await Astro.glob<MarkdownFrontmatter>("./post/*.md");
 
 function formatData(date: string) {
   const d = new Date(date);
   return d.toDateString();
 }
 ---
+
 <!DOCTYPE html>
 <html lang="en">
-<Head title={ SITE_TITLE } description={ SITE_DESCRIPTION }/>
-<body>
-  <div class="min-h-screen">
-    <Navbar/>
-    <Header/>
-    <main class="min-h-screen h-full mx-10 my-10 flex justify-center">
-      <div class="w-full sm:w-8/12 md:w-8/12 lg:w-6/12 xl:w-4/12">
-        <ul class="mt-20">
-          {
-            posts.map(post => {
-              return <li class="mb-8">
-                <a href={ post.url } class="text-4xl font-bold">
-                  { post.frontmatter.title }
-                </a>
-                <div class="text-gray-500">
-                  { formatData(post.frontmatter.pubDate) }
-                </div>
-                <div class="text-gray-800 mt-2">
-                  { post.frontmatter.summary ?? post.frontmatter.summary }
-                </div>
-                <div class="text-gray-800 mt-4 flex space-x-2">
-                  {
-                    post.frontmatter.tags.map(tag => {
-                      tag.toLowerCase() !== 'post' && (
-                        <div class="w-fit px-3 py-1 border-2 border-teal-500 rounded-lg">{tag}</div>
-                      )
-                    })
-                  }
-                </div>
-              </li>
-            })
+  <Head title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  <body>
+    <div class="min-h-screen">
+      <Navbar />
+      <Header />
+      <main class="min-h-screen h-full mx-10 my-10 flex justify-center">
+        <div class="w-full sm:w-8/12 md:w-8/12 lg:w-6/12 xl:w-4/12">
+          <ul class="mt-20">
+            {
+              posts.map((post) => {
+                return (
+                  <li class="mb-8">
+                    <a href={post.url} class="text-4xl font-bold">
+                      {post.frontmatter.title}
+                    </a>
+                    <div class="text-gray-500">
+                      {formatData(post.frontmatter.pubDate)}
+                    </div>
+                    <div class="text-gray-800 mt-2">
+                      {post.frontmatter.summary ?? post.frontmatter.summary}
+                    </div>
+                    <div class="text-gray-800 mt-4 flex space-x-2">
+                      {post.frontmatter.tags.map((tag) => {
+                        tag.toLowerCase() !== "post" && (
+                          <div class="w-fit px-3 py-1 border-2 border-teal-500 rounded-lg">
+                            {tag}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </li>
+                );
+              })
+            }
+          </ul>
+        </div>
+        <script>
+          async function sendToLytic() {
+            const res = await fetch(
+              "https://lytic-4q62.vercel.app/api/clicks/home",
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+              }
+            );
           }
-        </ul>
-      </div>
-    </main>
-    <Footer/>
-  </div>
-</body>
+
+          await sendToLytic();
+        </script>
+      </main>
+      <Footer />
+    </div>
+  </body>
 </html>
