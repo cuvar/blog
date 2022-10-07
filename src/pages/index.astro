@@ -32,30 +32,40 @@ function formatData(date: string) {
         <div class="w-full sm:w-8/12 md:w-8/12 lg:w-6/12 xl:w-4/12">
           <ul class="mt-20">
             {
-              posts.map((post) => {
-                return (
-                  <li class="mb-8">
-                    <a href={post.url} class="text-4xl font-bold">
-                      {post.frontmatter.title}
-                    </a>
-                    <div class="text-gray-500">
-                      {formatData(post.frontmatter.pubDate)}
-                    </div>
-                    <div class="text-gray-800 mt-2">
-                      {post.frontmatter.summary ?? post.frontmatter.summary}
-                    </div>
-                    <div class="text-gray-800 mt-4 flex space-x-2">
-                      {post.frontmatter.tags.map((tag) => {
-                        tag.toLowerCase() !== "post" && (
-                          <div class="w-fit px-3 py-1 border-2 border-teal-500 rounded-lg">
-                            {tag}
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </li>
-                );
-              })
+              posts.map(
+                (post: {
+                  url: string | URL | null | undefined;
+                  frontmatter: {
+                    title: unknown;
+                    pubDate: string;
+                    summary: any;
+                    tags: any[];
+                  };
+                }) => {
+                  return (
+                    <li class="mb-8">
+                      <a href={post.url} class="text-4xl font-bold">
+                        {post.frontmatter.title}
+                      </a>
+                      <div class="text-gray-500">
+                        {formatData(post.frontmatter.pubDate)}
+                      </div>
+                      <div class="text-gray-800 mt-2">
+                        {post.frontmatter.summary ?? post.frontmatter.summary}
+                      </div>
+                      <div class="text-gray-800 mt-4 flex space-x-2">
+                        {post.frontmatter.tags.map((tag) => {
+                          tag.toLowerCase() !== "post" && (
+                            <div class="w-fit px-3 py-1 border-2 border-teal-500 rounded-lg">
+                              {tag}
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </li>
+                  );
+                }
+              )
             }
           </ul>
         </div>
