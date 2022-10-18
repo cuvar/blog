@@ -44,16 +44,16 @@ function formatData(date: string) {
                 }) => {
                   return (
                     <li class="mb-8">
-                      <a href={post.url} class="text-4xl font-bold">
+                      <a href={post.url} class="text-4xl font-bold text-slate-800">
                         {post.frontmatter.title}
                       </a>
-                      <div class="text-gray-500">
+                      <div class="text-slate-500">
                         {formatData(post.frontmatter.pubDate)}
                       </div>
-                      <div class="text-gray-800 mt-2">
+                      <div class="text-slate-800 mt-2">
                         {post.frontmatter.summary ?? post.frontmatter.summary}
                       </div>
-                      <div class="text-gray-800 mt-4 flex space-x-2">
+                      <div class="text-slate-800 mt-4 flex space-x-2">
                         {post.frontmatter.tags.map((tag) => {
                           tag.toLowerCase() !== "post" && (
                             <div class="w-fit px-3 py-1 border-2 border-teal-500 rounded-lg">
@@ -70,16 +70,15 @@ function formatData(date: string) {
           </ul>
         </div>
         <script>
-          async function sendToLytic() {
-            const res = await fetch(
-              "https://lytic-4q62.vercel.app/api/clicks/blog",
-              {
-                method: "POST",
-              }
-            );
-          }
-
-          await sendToLytic();
+          (async () => {
+            try {
+              await fetch(
+                "https://lytic-4q62.vercel.app/api/clicks/blog", { method: "POST" }
+              );
+            } catch (error) {
+              console.error(error);
+            }
+          })()
         </script>
       </main>
       <Footer />
