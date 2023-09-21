@@ -1,14 +1,10 @@
 ---
-layout: "../../layouts/Post.astro"
-title: "Initial commit"
-pubDate: 2021-02-02
-summary: So I’ve been struggling for a while now whether I should start a blog. In the end, I decided to set up this website, as I just wanted to try out, what it is like to have a blog.
-url: initial_commit 
-tags: 
-  - post
-  - hello world
+title: Initial Commit
+date: 2021/02/02
+description: Why I, and proably you too, should start a blog.
+tag: web development
+author: You
 ---
-<!-- more -->
 So I’ve been struggling for a while now whether I should start a blog. In the end, I decided to set up this website, as I just wanted to try out, what it is like to have a blog. However, nothing happened afterwards. The reasons for this are quite simple. First, I feel like I don’t like writing. But maybe this is caused by lots of reports, stories and documents I had to write during my time at school or university. Secondly, for me a blog is all about sharing (new) thoughts and ideas. But as I’m quite young, do I have any thoughts or opinions that are worth sharing?
 <br/>
 <br/>
