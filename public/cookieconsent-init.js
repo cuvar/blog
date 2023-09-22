@@ -1,6 +1,3 @@
-// obtain plugin
-
-// run plugin with your configuration
 const pluginConfig = {
   current_lang: 'en',
   autoclear_cookies: true,                   // default: false
@@ -129,10 +126,9 @@ const pluginConfig = {
       },
     },
   },
-}
+};
 
-// var cc = initCookieConsent();
-if (!document.getElementById("cc--main")) {
+if (typeof document !== "undefined" && !document.getElementById("cc--main")) {
   window.CC = window.initCookieConsent();
   window.CC.run(pluginConfig);
 }
