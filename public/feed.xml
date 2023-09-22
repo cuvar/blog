@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title><![CDATA[Your Name]]></title>
-        <description><![CDATA[Your Name]]></description>
-        <link>https://yoursite.com</link>
+        <title><![CDATA[Luca Müller]]></title>
+        <description><![CDATA[Luca Müller]]></description>
+        <link>https://blog.cuvar.dev</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 21 Sep 2023 19:00:12 GMT</lastBuildDate>
-        <atom:link href="https://yoursite.com/feed.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Fri, 22 Sep 2023 10:28:03 GMT</lastBuildDate>
+        <atom:link href="https://blog.cuvar.dev/feed.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[Initial Commit]]></title>
             <description><![CDATA[Why I, and proably you too, should start a blog.]]></description>
