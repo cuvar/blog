@@ -8,7 +8,7 @@ export default function Document() {
   };
 
   return (
-    <Html lang="en">
+    <Html lang="en" translate="no">
       <Head>
         <meta name="robots" content="follow, index" />
         <meta name="description" content={meta.description} />

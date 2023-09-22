@@ -1,18 +1,17 @@
-/**
- * @type {UserConfig}
- */
-const pluginConfig: UserConfig = {
-  current_lang: "en",
-  autoclear_cookies: true, // default: false
-  page_scripts: true, // default: false
+// obtain plugin
+
+// run plugin with your configuration
+const pluginConfig = {
+  current_lang: 'en',
+  autoclear_cookies: true,                   // default: false
+  page_scripts: true,                        // default: false
 
   // mode: 'opt-in'                          // default: 'opt-in'; value: 'opt-in' or 'opt-out'
   // delay: 0,                               // default: 0
   // auto_language: null                     // default: null; could also be 'browser' or 'document'
-  // auto_language: "null", // default: null; could also be 'browser' or 'document'
   // autorun: true,                          // default: true
   // force_consent: false,                   // default: false
-  // hide_from_bots: false,                  // default: false
+  // hide_from_bots: true,                   // default: true
   // remove_cookie_tables: false             // default: false
   // cookie_name: 'cc_cookie',               // default: 'cc_cookie'
   // cookie_expiration: 182,                 // default: 182 (days)
@@ -24,24 +23,21 @@ const pluginConfig: UserConfig = {
   // revision: 0,                            // default: 0
 
   onFirstAction: function (
-    _userPreferences: UserPreferences,
-    _cookie: SavedCookieContent,
+    _userPreferences,
+    _cookie,
   ) {
     // callback triggered only once
     const analyticsEnabled = window.CC.allowedCategory("analytics");
     console.log(`analytics ${analyticsEnabled ? "enabled" : "disabled"}`);
   },
 
-  onAccept: function (_savedCookieContent: SavedCookieContent) {
+  onAccept: function (_savedCookieContent) {
     window.CC.run({
       page_scripts: true,
     });
   },
 
-  onChange: function (
-    _cookie: SavedCookieContent,
-    _changedCookieCategories: string[],
-  ) {
+  onChange: function (cookie, changed_preferences) {
     // ...
   },
 
@@ -133,6 +129,10 @@ const pluginConfig: UserConfig = {
       },
     },
   },
-};
+}
 
-export default pluginConfig;
+// var cc = initCookieConsent();
+if (!document.getElementById("cc--main")) {
+  window.CC = window.initCookieConsent();
+  window.CC.run(pluginConfig);
+}

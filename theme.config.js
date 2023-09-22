@@ -1,27 +1,22 @@
 const YEAR = new Date().getFullYear()
 
 export default {
-  themeSwitch: {
-    useOptions() {
-      return {
-        light: 'Light',
-        dark: 'Dark',
-        system: 'System'
-      }
-    }
-  },
   footer: (
     <footer>
       <small>
-        <time>{YEAR}</time> © Luca Müller
+        <span>
+          <time>{YEAR}</time> © Luca Müller
+        </span>
+        <button type="button" data-cc="c-settings">Manage cookie settings</button>
         <a href="/feed.xml">RSS</a>
       </small>
       <style jsx>{`
         footer {
           margin-top: 8rem;
         }
-        a {
-          float: right;
+        small {
+          display: flex;
+          justify-content: space-between;
         }
       `}</style>
     </footer>
