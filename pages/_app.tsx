@@ -3,7 +3,7 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import "../styles/main.css";
 import "vanilla-cookieconsent/dist/cookieconsent.css";
-// import CookieConsentComponent from "../utils/cookie/CookieConsentComponent";
+import Script from "next/script";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -24,18 +24,19 @@ export default function App({ Component, pageProps }: AppProps) {
         />
       </Head>
       <Component {...pageProps} />
-      <script
+      <Script
         defer
         data-domain="blog.cuvar.dev"
+        strategy="afterInteractive"
         type="text/plain"
         data-cookiecategory="analytics"
         src="https://plausible.io/js/script.js"
-      ></script>
-      <script
+      ></Script>
+      <Script
         defer
         src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.9.2/dist/cookieconsent.js"
-      ></script>
-      <script defer src="cookieconsent-init.js"></script>
+      ></Script>
+      <Script defer src="cookieconsent-init.js"></Script>
     </>
   );
 }
