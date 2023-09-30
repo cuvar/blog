@@ -7,7 +7,7 @@ export default {
         <span>
           <time>{YEAR}</time> © Luca Müller
         </span>
-        <button type="button" data-cc="c-settings">Manage cookie settings</button>
+        {/* <button type="button" data-cc="c-settings">Manage cookie settings</button> */}
         <a href="/feed.xml">RSS</a>
       </small>
       <style jsx>{`
