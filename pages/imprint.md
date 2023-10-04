@@ -3,4 +3,10 @@ type: page
 title: Imprint
 ---
 
-![Kontaktdaten](/imprint.jpeg)
+Luca Müller
+
+Willi-Graf-Straße 8
+
+69190 Walldorf
+
+luca [@] cuvar [dot] dev
