@@ -1,6 +1,6 @@
-import "nextra-theme-blog/style.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import "nextra-theme-blog/style.css";
 import "../styles/main.css";
 // import "vanilla-cookieconsent/dist/cookieconsent.css";
 import Script from "next/script";
@@ -15,6 +15,7 @@ export default function App({ Component, pageProps }: AppProps) {
           title="RSS"
           href="/feed.xml"
         />
+        <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
         <link
           rel="preload"
           href="/fonts/Inter-roman.latin.var.woff2"
